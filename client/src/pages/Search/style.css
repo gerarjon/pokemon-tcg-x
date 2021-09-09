@@ -1,0 +1,8 @@
+.card .card-content {
+  padding: .3rem 0.8rem;
+}
+
+.card__price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
