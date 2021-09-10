@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react' 
 import API from '../../utils/API'
+import Container from '../../components/Container'
 import './style.css'
 
 const Search = () => {
@@ -25,7 +26,7 @@ const Search = () => {
   return(
     <>
       <form>
-        <div className="field has-addons">
+        <div className="field has-addons search__bar">
           <div className="control">
             <input 
               className="input" 
@@ -46,10 +47,12 @@ const Search = () => {
       </form>
 
       <section>
-        <div className="columns is-multiline">
+        <Container>
+
+        <div className="columns is-multiline is-mobile">
           {cardList.map(card => {
             return (
-              <div className="column is-one-fifth" key={card.id}>
+              <div className="column is-one-fifth-desktop is-half-mobile" key={card.id}>
                 <div className="card">
                   <div className="card-image">
                     <figure>
@@ -68,6 +71,7 @@ const Search = () => {
           })} 
         </div>
 
+        </Container>
       </section>
     </>
   )

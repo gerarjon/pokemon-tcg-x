@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Search from './pages/Search'
 import Container from './components/Container'
@@ -14,7 +14,11 @@ function App() {
       <Container>
         <BrowserRouter>
           <Navbar />
-          <Search />
+          <main className="main">
+            <Switch>
+              <Route path='/search' component={Search} />
+            </Switch>
+          </main>
         </BrowserRouter>
       </Container>
     </>
